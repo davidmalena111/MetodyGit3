@@ -42,7 +42,7 @@ namespace MetodyGit3
 
             //Aktualni datum 
             DateTime datum = DateTime.Now;
-            MessageBox.Show("Aktualni datum je: " + Metoda3(datum).ToShortDateString());
+            MessageBox.Show("Aktualni datum je: " + Metoda3(datum).ToShortDateString());  //Funguje tak, jak má
         }
 
     }
