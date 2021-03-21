@@ -16,6 +16,11 @@ namespace MetodyGit3
         {
             InitializeComponent();
         }
+        TimeSpan Kolik(DateTime dt1, DateTime dt2, TimeSpan interval)
+        {
+            interval = dt2 - dt1;
+            return interval;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -24,7 +29,7 @@ namespace MetodyGit3
             
             TimeSpan casovyInterval = dt2 - dt1;
             
-            MessageBox.Show("Počet dní, které uplynuly mezi těmito daty: " + casovyInterval.TotalDays);
+            MessageBox.Show("Počet dní, které uplynuly mezi těmito daty: " + Kolik(dt1,dt2,casovyInterval).TotalDays);
 
             //Funguje to bez problemu.
 
