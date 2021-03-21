@@ -22,21 +22,27 @@ namespace MetodyGit3
             return interval;
         }
 
+
+        DateTime Metoda3(DateTime datum)  //Pridavam Metodu3 a to na aktualni datum.
+        {
+            return datum = DateTime.Now;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             DateTime dt1 = DateTime.Parse(textBox1.Text);
             DateTime dt2 = DateTime.Parse(textBox2.Text);
-            
+
             TimeSpan casovyInterval = dt2 - dt1;
-            
-            MessageBox.Show("Počet dní, které uplynuly mezi těmito daty: " + Kolik(dt1,dt2,casovyInterval).TotalDays);
+
+            MessageBox.Show("Počet dní, které uplynuly mezi těmito daty: " + Kolik(dt1, dt2, casovyInterval).TotalDays);
 
             //Funguje to bez problemu.
 
 
-            //Přidávám metodu na aktuální čas.
-            DateTime dt = DateTime.Now;
-            MessageBox.Show("Aktualni datum a čas je: " + dt.ToString());
+            //Aktualni datum 
+            DateTime datum = DateTime.Now;
+            MessageBox.Show("Aktualni datum je: " + Metoda3(datum).ToShortDateString());
         }
 
     }
