@@ -21,9 +21,18 @@ namespace MetodyGit3
         {
             DateTime dt1 = DateTime.Parse(textBox1.Text);
             DateTime dt2 = DateTime.Parse(textBox2.Text);
-
+            
             TimeSpan casovyInterval = dt2 - dt1;
+            
             MessageBox.Show("Počet dní, které uplynuly mezi těmito daty: " + casovyInterval.TotalDays);
+
+            //Funguje to bez problemu.
+
+
+            //Přidávám metodu na aktuální čas.
+            DateTime dt = DateTime.Now;
+            MessageBox.Show("Aktualni datum a čas je: " + dt.ToString());
         }
+
     }
 }
